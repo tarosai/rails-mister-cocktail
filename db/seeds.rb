@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts "Destroying coctails"
+Cocktail.destroy_all
+
+puts "Adding new coctails"
+attributes = [
+  {
+    name: "kill king"
+  },
+  {
+    name: "king of alchohol"
+  },
+  {
+    name: "queen"
+  }
+]
+
+Cocktail.create!(attributes)
+puts "Seed done!"
