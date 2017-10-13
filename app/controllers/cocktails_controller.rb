@@ -14,11 +14,8 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    #  with attributes from the params
     @cocktail = Cocktail.new(cocktail_params)
-    # save it
     if @cocktail.save
-      # redirect
       redirect_to cocktail_path(@cocktail)
     else
       render :new #render 'new.html.erb'
